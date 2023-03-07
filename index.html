@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaScript</title>
+</head>
+<body>
+    <h2>Advance JavaScript</h2>
+    
+    <h4>topics</h4>
+    <p>Course overview</p>
+    <p>let and const variables</p>
+    <p>templete litrals</p>
+
+
+    <script>
+        console.log('...... rest oprator ........');
+        function sum(name, ...arguments){
+            // console.log(x, arguments);
+            let sum = 0;
+            console.log(name)
+            for(let i in arguments){
+                // console.log(arguments[i]);
+                sum += arguments[i];
+            }
+            console.log(sum)
+        }
+        // console.log(sum)
+        sum('aa', 10,20,5);
+
+        const data = ['abc', 2,3,1];
+
+        data.map((a)=>{
+            console.log(a);
+        })
+        // sum(20,10)
+        // const newData = [name, ...argu];
+
+        console.log('...... object literal ......');
+
+        const n = 'name';
+
+        const obj1 = {
+            [n]:'Mohammad',
+            course : 'BCA'
+        }
+        console.log(obj1.name);
+
+    </script>
+
+    <script>
+        let list = [1,2,1,3,4,55,3,2,2];
+        let dupList = [];
+        let notDup = []
+        let a = list.filter((acc,index) => {
+            // console.log(list.indexOf(acc) === index)
+            // list.indexOf(acc) === index ? 'acc' : 'index'
+            if(list.indexOf(acc) === index){
+                notDup.push(acc)
+            }else{
+                // console.log('duplicate', acc)
+                dupList.push(acc)
+            }
+        })
+        console.log('notDuplicate', notDup)
+        console.log('duplicate', dupList)
+    </script>
+</body>
+</html>
